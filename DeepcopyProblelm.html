@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+    </head>
+    <body>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js" integrity="sha512-WFN04846sdKMIP5LKNphMaWzU7YpMyCU245etK3g/2ARYbPK9Ub18eG+ljU96qKRCWh+quCY7yefSmlkQw1ANQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+       <script>
+
+const obj={
+                name:"Satyam Sharma",
+                Address:{
+                    city:"noida",
+                    colony:"Tansen"
+                },
+                getData:function()   
+                {
+                    console.log("hello")
+
+                }
+            }
+
+                   /*      const user=JSON.parse(JSON.stringify(obj))
+                                     
+                        user.Address.colony="Saket"
+                        console.log("obj",obj)
+                        console.warn("user",user) */
+                        /* Here is Problem is this in deep copy function and date is not show on the console ther is a solution is only this is loaddash */
+                    const user=_.cloneDeep(obj);
+                    user.Address.colony="Saket"
+                        console.log("obj",obj)
+                        console.warn("user",user)
+
+      </script> 
+    </body>
+</html>

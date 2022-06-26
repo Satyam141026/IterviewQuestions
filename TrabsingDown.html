@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+
+        <div class="gp" id="grandParent">
+            Grand Parent
+            <div class="p">
+               Parent
+                <div class="c">
+                    Child
+                    <div class="gc gc1">grand child1</div>
+                    <div class="gc gc2">grand child2</div>
+
+                </div>
+            </div>
+        </div>
+     <script>
+        var a= document.getElementById('grandParent')
+        console.log(a);
+   
+    /*   const b= a.querySelector('.gc.gc1') */
+    const b=a.querySelectorAll('.gc')
+      console.log(b);
+      b.forEach((cv,index,arr)=>{
+        console.log(cv);
+        cv.style.border='1px dotted red'
+      
+      })
+      
+      
+  
+   
+     </script>   
+        
+    </body>
+</html>

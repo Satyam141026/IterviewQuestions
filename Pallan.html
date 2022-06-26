@@ -1,0 +1,36 @@
+<html>
+    <head> 
+    <title> JavaScript Palindrome </title>
+    </head>
+    <body>
+
+
+    <script>		
+    function app(str){
+        console.log(str);
+        var len=str.length
+        console.log("log",len)
+
+for(var i=0;i<len/2; i++){
+    console.log(str[i],str[len-i-1]);
+    if(str[i]!==str[len-i-1]){
+        alert("no. is not pallandrom")
+
+    }
+}
+alert("no. is  pallandrom")
+
+
+
+
+
+
+
+
+
+    }		
+    var a=prompt("enter a number")
+    const v=app(a)
+    </script>
+    </body>
+</html> 

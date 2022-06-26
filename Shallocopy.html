@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+    
+        
+        <script>
+            const obj={
+                name:"Satyam Sharma"
+            }
+         /*   Problem is this const user=obj;
+            obj.name="jaya";
+            console.log("obj",obj)
+            console.warn("user",user)
+ */
+/* solution on this shallo copy it is has to method 1st is Object. and 2nd is the spread opratior or object distrchoring */
+                    /*1.     const user=Object.assign({},obj)
+                        user.name="jaya";
+                        console.log("obj",obj)
+                        console.warn("user",user) */
+                        const user={... obj}
+                        user.name="kanno"
+                        console.log("obj",obj)
+                        console.warn("user",user)
+                        
+            
+        </script>
+
+
+<!-- Note - In shallo copy nested object is not work for this we use a deep copy -->
+
+
+    </body>
+</html>
